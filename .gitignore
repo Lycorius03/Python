@@ -1,0 +1,19 @@
+# Python 运行缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 编辑器/IDE 配置 (VS Code & PyCharm)
+.vscode/
+.idea/
+*.swp
+
+# 虚拟环境 (如果你的文件夹叫 .venv)
+.venv/
+venv/
+env/
+
+# 操作系统临时文件
+Thumbs.db
+.DS_Store
