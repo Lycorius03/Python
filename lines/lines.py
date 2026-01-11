@@ -8,7 +8,7 @@ def main():
     with open(file_path,"r") as file:
       lines = file.readlines()
     
-    conut = 0
+    count = 0
     for line in lines:
       stripped_line = line.strip()
 
@@ -16,20 +16,20 @@ def main():
         continue
       if stripped_line.startswith('#'):
         continue
-      conut += 1
+      count += 1
 
-    print(conut)
+    print(count)
 
-  except FileExistsError:
+  except FileNotFoundError:
     sys.exit("File does not exsit")
 
 def check_command_line_arg():
   if len(sys.argv) < 2:
-    sys.exsit("Too few command_line argumnets")
+    sys.exit("Too few command_line argumnets")
   elif len(sys.argv) > 2:
-    sys.exsit("Too many command_line agruments")
+    sys.exit("Too many command_line agruments")
   if not sys.argv[1].endswith(".py"):
-    sys.exist("Not a Python file") 
+    sys.exit("Not a Python file") 
 
 if __name__ == "__main__":
-  main()
+   main()
